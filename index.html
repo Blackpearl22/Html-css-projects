@@ -19,7 +19,7 @@
   <body style="background-color: black">
     <img
       id="cngImg"
-      src="/images/bulb-off.jpg"
+      src="images/bulb-off.jpg"
       alt="bulb off image"
       style="display: block"
     />
@@ -35,10 +35,10 @@
       btn.addEventListener("click", stateChange);
       function stateChange(e) {
         if (btn.textContent.includes("On")) {
-          img.src = "/images/bulb-on.jfif";
+          img.src = "images/bulb-on.jfif";
           btn.textContent = "Turn Off";
         } else {
-          img.src = "/images/bulb-off.jpg";
+          img.src = "images/bulb-off.jpg";
           btn.textContent = "Turn On";
         }
       }
