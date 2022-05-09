@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Light Bulb State</title>
+    <style>
+      img {
+        margin: 0 auto 0 auto;
+      }
+      button {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    </style>
+  </head>
+  <body style="background-color: black">
+    <img
+      id="cngImg"
+      src="/images/bulb-off.jpg"
+      alt="bulb off image"
+      style="display: block"
+    />
+    <button
+      id="toggleAdd"
+      style="margin-top: 20px; padding: 10px 20px 10px 20px"
+    >
+      Turn On
+    </button>
+    <script>
+      let img = document.getElementById("cngImg");
+      let btn = document.getElementById("toggleAdd");
+      btn.addEventListener("click", stateChange);
+      function stateChange(e) {
+        if (btn.textContent.includes("On")) {
+          img.src = "/images/bulb-on.jfif";
+          btn.textContent = "Turn Off";
+        } else {
+          img.src = "/images/bulb-off.jpg";
+          btn.textContent = "Turn On";
+        }
+      }
+    </script>
+  </body>
+</html>
